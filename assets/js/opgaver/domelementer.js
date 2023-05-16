@@ -7,8 +7,10 @@ Du skal finde elementet med id="redFigure" og console logge det.
 Du skal finde elementet med id="yellowFigure" og console logge det. 
 */
 
-// din kode her
-
+let NyRoedFigur = document.getElementById('redFigure');
+console.log('NyRoedFigur');
+let NyGulFigur = document.getElementById('yellowFigure');
+console.log('NyGulFigur');
 
 /* opgave 1.2
 Du skal ændre baggrundsfarve på de to elementer du har fundet i opgave 1.1
@@ -16,7 +18,8 @@ farven på elementerne skal være blå. brug evt. elelement.style.backgroundColo
 */
 
 
-// din kode her
+NyRoedFigur.style.backgroundColor = 'blue';
+NyGulFigur.style.backgroundColor = 'blue';
 
 
 
@@ -27,7 +30,18 @@ Du skal oprette følgende HTML elementer i Elementet med id opgaveTwo.
 */
 
 
-// din kode her
+let eksisterendeElement = document.getElementById("opgaveTwo");
+
+let nyOverskrift = document.createElement("h2")
+
+eksisterendeElement.appendChild(nyOverskrift);
+nyOverskrift.innerText = "Opgave 2.1 løsning.";
+
+let nyParagraf = document.createElement("p");
+
+eksisterendeElement.appendChild(nyParagraf);
+nyParagraf.innerText = "Jeg har løst opgave 2.1.";
+
 
 
 // opgave 3 liveHTML lists
@@ -35,7 +49,8 @@ Du skal oprette følgende HTML elementer i Elementet med id opgaveTwo.
 Du skal finde alle elementer med klassen purpleFigures og console logge resultatet
 */
 
-// din kode her
+let lillaFigure = document.getElementsByClassName("purpleFigures");
+console.log("lillaFigure");
 
 
 /* opgave 3.2
@@ -45,6 +60,12 @@ array.from beskrivelse HER: https://developer.mozilla.org/en-US/docs/Web/JavaScr
 */
 
 // din kode her
+let changeLillaFigur = Array.from(lillaFigure);
+console.log(changeLillaFigur);
+
+changeLillaFigur.map((element) => {
+    element.style.backgroundColor = 'red';
+});
 
 
 /* opgave 3.3
@@ -53,7 +74,16 @@ myElement.children[0].innerHTML til at ændre 1. child elements inner html.
 */
 
 
-// din kode her
+//ingen af delene virker og jeg har ingen idé om hvordan jeg skal løse opgaven 
+const myElement = document.getElementsByTagName("h3");
+
+for (const child of myElement.children[0].innerHTML) {
+    console.log(child.myElement);
+}
+myElement.style.h3 = RED;
+
+document.getElementsByTagName("h3").innerHTML = "RED";
+// din kode her - 
 
 
 
@@ -68,9 +98,5 @@ const myData = {
     description: 'En tiger er et stort, katteagtig rovdyr med orange og sort striber i pelsen og skarpe tænder og kløer.'
 };
 
-
 // din kode her
-
-
-
 
